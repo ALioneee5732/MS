@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pink">#FBD2F6</color>
+    <color name="pinkbackground">#FFEEFF</color>
+    <color name="pinkbackbg">#FBEAF9</color>
+    <color name="pinkbackdialog">#FFDCFA</color>
+    <color name="pinkt">#EF99E1</color>
+    <color name="deeppink">#E484D7</color>
+<!--    <color name="purple_200">#FFBB86FC</color>-->
+    <color name="pinkk">#EDBAFF</color>
+    <color name="pinkkk">#E9ADFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#A2FCFF</color>
+</resources>
