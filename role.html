@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>角色页面</title>
+		<link rel="icon" href="./img/favicon.ico"/>
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+		<link rel="stylesheet" type="text/css" href="css/role.css"/>
+		
+	</head>
+	
+	<body>
+		<div class="top-nav">
+			<img src="img/f5aa6983dbc7202b476044f4b2ad4c6b_6969327763994123504.webp" />
+			<ul>
+				<a href="index.html"><li class="active">首页</li></a>
+				<a href="role.html"><li class="active">角色</li></a>
+				<a href="world.html"><li class="active">世界</li></a>
+				<a href="#"><li>社区</li></a>
+				<a href="#"><li>攻略</li></a>
+		
+			</ul>
+		</div>
+		
+		<div class="vido-div">
+			<img src="img/58672a7a969e9c682836e93d3a9f36c2_8216746459286921539.jpg"/>
+		</div>
+		
+		<div class="role-div">
+			<img src="img/role2.png" class="role-img"/>
+		</div>
+		
+	<div class="select-div">
+		<img class="left-arrow" src="img/left.png"/>
+		<img class="avartar" src="img/portrait2.png"/>
+		<img class="avartar" src="img/portrait2.png"/>
+		<img class="avartar" src="img/portrait2.png"/>
+		<!-- <img class="avartar" src="img/portrait1.png"/> -->
+		<img class="right-arrow" src="img/right.png"/>
+
+	</div>
+		
+	</body>
+	
+	<script src="./js/role.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		var cur_index=0;//全局变量
+		
+		$(document).ready(function() {
+			change(cur_index);//默认执行一次
+		    $(".avartar").each(function(index, e) {//index第几个图片 e图片本身
+			
+		        $(this).attr("src", avatar_arr[index]);
+				
+		        $(this).click(function() {
+					cur_index=index;
+					change(cur_index);
+		        });
+		    });
+			$(".left-arrow").click(function() {
+				if(cur_index>0){
+					cur_index = cur_index - 1;
+					change(cur_index);
+				}
+			});
+			$(".right-arrow").click(function() {
+				if(cur_index<2){
+						cur_index=cur_index+1;
+						change(cur_index);
+					}
+				});
+			});
+		
+		
+		
+		
+		function change(cur_index){//封装独立函数
+			$(".selected").removeClass("selected"); // 移除已选中状态
+			$(".avartar:eq("+cur_index+")").addClass("selected");// if直接放cur_index只会是字符串 需要用++拼接
+			$(".role-img").attr("src", se_avatar_arr[cur_index]);// 切换对应的角色图片
+		}
+		
+	</script>
+	
+</html>
